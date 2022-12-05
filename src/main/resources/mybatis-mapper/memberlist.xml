@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.cointradingwebsite.mapper.MemberMapper">
+    <select id="selectMemberByEmail" resultType="com.example.cointradingwebsite.dto.MemberDTO">
+        select
+            *
+        from
+            member
+        where EMAIL = #{email}
+    </select>
+
+    <select id="findMember" resultType="HashMap">
+        select
+            email,password,name,phone,address,detail
+        from
+            member
+        where email= #{email} and password = #{password}
+    </select>
+
+    <insert id="insertMember" parameterType="HashMap">
+        insert into member
+--             [email, password, name, phone, address, addressDetail]
+            (email,password,name,phone,address,detail)
+        values
+            (#{email},#{password},#{name},#{phone},#{address},#{addressDetail})
+    </insert>
+</mapper>

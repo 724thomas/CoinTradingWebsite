@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.cointradingwebsite.mapper.RequestCallMapper">
+
+    <insert id="requestCall" parameterType="HashMap">
+        insert into contact
+            (name, email, phone, message)
+        values
+            (#{name},#{email},#{phone},#{message})
+    </insert>
+
+    <select id="selectRequestCallByEmail" resultType="HashMap">
+        select
+            *
+        from
+            contact
+        where email = #{email}
+    </select>
+</mapper>
