@@ -20,4 +20,9 @@ public class PageController {
     public String goLogin(){
         return "login";
     }
+
+    @GetMapping("/goPay")
+    public String goPay(){
+        return "pay";
+    }
 }
