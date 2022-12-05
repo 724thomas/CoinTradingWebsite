@@ -10,7 +10,6 @@
             (#{name},#{email},#{phone},#{message})
     </insert>
 
-
     <select id="selectRequestCallByEmail" resultType="HashMap">
         select
             *
