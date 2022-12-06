@@ -1,19 +1,10 @@
 package com.example.cointradingwebsite.dto;
 
 public class PaymentDTO {
-
-    private String id;
     private String email;
     private int amount;
     private String uid;
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getEmail() {
         return email;
@@ -39,8 +30,15 @@ public class PaymentDTO {
         this.uid = uid;
     }
 
-    public PaymentDTO(String id, String email, int amount, String uid) {
-        this.id = id;
+    public PaymentDTO() {
+    }
+
+    public PaymentDTO(int amount, String uid) {
+        this.amount = amount;
+        this.uid = uid;
+    }
+
+    public PaymentDTO(String email, int amount, String uid) {
         this.email = email;
         this.amount = amount;
         this.uid = uid;

@@ -3,6 +3,8 @@ package com.example.cointradingwebsite.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import javax.servlet.http.HttpSession;
+
 @Controller
 public class PageController {
 
@@ -22,7 +24,11 @@ public class PageController {
     }
 
     @GetMapping("/goPay")
-    public String goPay(){
+    public String goPay(HttpSession session){
+        if (session.getAttribute("email")==null){
+            System.out.println("로그인이 필요합니다");
+            return "redirect:/goLogin";
+        }
         return "pay";
     }
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.cointradingwebsite.mapper.PaymentMapper">
+    <insert id="insertIntoPayment" parameterType="com.example.cointradingwebsite.dto.PaymentDTO">
+        insert into payment
+            (email, amount, uid)
+        values
+            (#{email},#{amount},#{uid})
+    </insert>
+
+
+</mapper>

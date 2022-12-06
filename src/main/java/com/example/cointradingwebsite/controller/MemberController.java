@@ -24,7 +24,7 @@ public class MemberController {
         }
         memberService.insertMember(member);
         System.out.println("회원가입 성공");
-        return "redirect:/";
+        return "redirect:/gologin";
     }
 
     @PostMapping("/login")
