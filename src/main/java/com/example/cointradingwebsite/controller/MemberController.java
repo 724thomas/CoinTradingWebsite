@@ -13,6 +13,7 @@ import java.util.HashMap;
 @Controller
 public class MemberController {
 
+
     @Autowired
     MemberService memberService;
 
